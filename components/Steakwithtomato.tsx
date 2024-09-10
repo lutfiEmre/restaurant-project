@@ -10,7 +10,8 @@ import 'swiper/css';
 import CouponModal from "@/components/CouponModal";
 
 const Steakwithtomato = () => {
-    const discountSwiper = useRef()
+    const discountSwiper = useRef<any>(null);
+
 
     const handleNextSlide = () => {
         if (discountSwiper.current && discountSwiper.current.swiper) {
@@ -40,7 +41,7 @@ const Steakwithtomato = () => {
         transition: { duration: 0.2 }
     };
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const couponCode = "INDIRIM50";
     return (
         <motion.div
