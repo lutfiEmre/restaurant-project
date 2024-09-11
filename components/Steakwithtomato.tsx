@@ -148,7 +148,7 @@ const Steakwithtomato = () => {
                 initial={{opacity: 0, y: 50}}
                 animate={{opacity: 1, y: 0}}
                 transition={{duration: 0.8}}
-                className={'sm:w-[552px] w-full bottom-[120px] right-[82px] mt-[120px] sm:absolute h-fit flex justify-center items-center'}
+                className={'sm:w-[552px] w-full bottom-[120px] right-[82px] mb-[-150px] sm:mb-0 mt-[150px] sm:absolute h-fit flex justify-center items-center'}
             >
                 <motion.div
                     whileHover={{scale: 1.02}}
@@ -203,7 +203,6 @@ const Steakwithtomato = () => {
                         ref={discountSwiper}
                         spaceBetween={50}
                         slidesPerView={1}
-
                         onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)}
                     >

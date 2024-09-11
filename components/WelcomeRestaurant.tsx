@@ -5,6 +5,7 @@
     import foodt from '../app/image/foodt.svg';
     import leaf1 from '../app/image/leaf2.svg';
     import leaf2 from '../app/image/leaf3.svg';
+    import TypeWriterEffect from "@/components/TypeWriterEffect";
 
     const WelcomeRestaurant: React.FC = () => {
         const fadeIn = {
@@ -51,39 +52,41 @@
             <motion.div
                 initial="hidden"
                 animate="visible"
-                className={'mt-[350px] gap-[80px] flex items-center flex-row'}
+                className={'   mt-[250px] lg:mt-[350px] 2xl:gap-[80px] flex items-center flex-col lg:flex-row'}
             >
                 <motion.div variants={slideIn("left")} className={'relative'}>
                     <motion.div animate={floatAnimation}>
-                        <Image className={'absolute z-10 right-[-50px] w-[230px] z-30 h-auto top-[120px]'} src={leaf1} width={221} height={147} alt={''}/>
+                        <Image className={'absolute z-10 right-[-50px] lg:w-[150px] xl:w-[230px] z-30 h-auto top-[120px]'} src={leaf1} width={221} height={147} alt={''}/>
                         <Image className={'absolute blur-[50px] z-30 right-[-50px] w-[230px] h-auto top-[120px]'} src={leaf1} width={221} height={147} alt={''}/>
 
                     </motion.div>
                     <motion.div variants={scaleIn}>
-                        <Image className={'w-[821px] h-auto -z-10'} width={821} height={762} src={foodt} alt={''}/>
+                        <Image className={'lg:w-[600px] w-[350px] sm:w-[450px] md:w-[600px] xl:w-[821px] h-auto -z-10'} width={821} height={762} src={foodt} alt={''}/>
                     </motion.div>
                     <motion.div animate={floatAnimation2}>
-                        <Image className={'absolute left-0 z-10 bottom-[150px] w-[120px] h-auto'} src={leaf2} width={104} height={216} alt={''}/>
+                        <Image className={'absolute left-0 z-10 bottom-[150px] lg:w-[90px] xl:w-[120px] h-auto'} src={leaf2} width={104} height={216} alt={''}/>
                         <Image className={'absolute blur-[50px] left-0 z-10 bottom-[150px] w-[120px] h-auto'} src={leaf2} width={104} height={216} alt={''}/>
 
                     </motion.div>
                 </motion.div>
-                <motion.div variants={slideIn("right")} className={'flex flex-col w-[550px]'}>
+                <motion.div variants={slideIn("right")} className={'flex flex-col w-full sm:w-[550px]'}>
                     <motion.h4
                         variants={fadeIn}
-                        className={'davidlibrebold text-[#101A24] text-center text-[68px]'}
+                        className={'davidlibrebold text-[#101A24] text-center text-[55px] sm:text-[68px]'}
                     >
-                        Welcome to Our Restaurant
+                        <TypeWriterEffect texta={"Welcome to Our Restaurant"}/>
+
+
                     </motion.h4>
                     <motion.h6
                         variants={fadeIn}
-                        className={'mt-[34px] inter-regular tracking-[2.4px] leading-7 text-[18px] text-[#5C6574]'}
+                        className={'mt-[34px] inter-regular text-center tracking-[2.4px] leading-7 text-[18px] text-[#5C6574]'}
                     >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </motion.h6>
                     <motion.div
                         variants={fadeIn}
-                        className={'mt-[50px] gap-[29px] flex flex-row'}
+                        className={'mt-[50px] gap-[29px] justify-center items-center flex flex-row'}
                     >
                         <motion.div
                             whileHover={buttonHover}
@@ -102,7 +105,7 @@
                             </p>
                         </motion.div>
                     </motion.div>
-                    asd
+
                 </motion.div>
             </motion.div>
         );
