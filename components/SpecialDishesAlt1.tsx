@@ -43,7 +43,7 @@ const SpecialDishesAlt1: React.FC = () => {
                 <motion.div
                     onClick={() => handleItemClick(index)}
                     key={index}
-                    className={`w-[302px] group cursor-pointer select-none border-white border-[2.29px] relative px-[22.86px] pt-[90px] flex-col flex justify-center items-center h-[353px] ${
+                    className={`w-[302px] z-10 group cursor-pointer select-none border-white border-[2.29px] relative px-[22.86px] pt-[90px] flex-col flex justify-center items-center h-[353px] ${
                         index === activeIndex ? 'bg-white' : ''
                     } rounded-tr-[10px] rounded-bl-[10px] rounded-br-[50px] rounded-tl-[50px]`}
                     animate={{ backgroundColor: index === activeIndex ? '#FFFFFF' : 'transparent' }}
