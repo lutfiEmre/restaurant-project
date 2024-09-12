@@ -3,6 +3,7 @@ import ResponsiveMenu from "@/components/ResponsiveMenu";
 import Steakwithtomato from "@/components/Steakwithtomato";
 import SpecialDishes from "@/components/SpecialDishes";
 import OurExpects from "@/components/OurExpects";
+import OurHappyCustomer from "@/components/OurHappyCustomer";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
           <Steakwithtomato/>
           <SpecialDishes/>
           <OurExpects/>
+          <OurHappyCustomer/>
           <div className={'w-full h-[500px]'}></div>
       </div>
   );

@@ -5,11 +5,7 @@ import { motion } from "framer-motion";
 import chef from '../app/image/chef 1.svg'
  import TypeWriterEffect from "@/components/TypeWriterEffect";
 
-interface OurExpectsProps {
-  chefImageSrc: string;
-}
-
-const OurExpects: React.FC<OurExpectsProps> = ({ chefImageSrc }) => {
+const OurExpects = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -44,7 +40,7 @@ const OurExpects: React.FC<OurExpectsProps> = ({ chefImageSrc }) => {
       initial="hidden"
       animate="visible"
     >
-      <div className="flex flex-col gap-[50px] w-[40%]">
+      <div className="flex flex-col gap-[50px] w-fit">
         <motion.div className="flex flex-col mt-[50px] lg:mt-[150px] gap-[20px]" variants={itemVariants}>
 
           <TypeWriterEffect texta={"Our Expects Chef"}/>

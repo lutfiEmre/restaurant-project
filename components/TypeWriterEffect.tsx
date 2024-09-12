@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-const TypewriterEffect = ({texta}) => {
-    const [text, setText] = useState(texta);
-    const fullText = texta;
+interface TypewriterEffectProps {
+    texta: string;
+}
+
+const TypewriterEffect: React.FC<TypewriterEffectProps> = ({ texta }) => {
+    const [text, setText] = useState<string>(texta);
+    const fullText: string = texta;
 
     useEffect(() => {
-        let currentIndex = 0;
-        const interval = setInterval(() => {
+        let currentIndex: number = 0;
+        const interval: NodeJS.Timeout = setInterval(() => {
             if (currentIndex <= fullText.length) {
                 setText(fullText.slice(0, currentIndex));
                 currentIndex++;
@@ -17,11 +21,11 @@ const TypewriterEffect = ({texta}) => {
         }, 100);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [fullText]);
 
     return (
         <motion.div
-            className="davidlibrebold text-center text-[68px] text-[#101A24]"
+            className="davidlibrebold text-center w-full text-[62px] text-[#101A24]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
