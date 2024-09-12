@@ -22,10 +22,10 @@ const SpecialDishes = () => {
             <div className={'flex flex-col justify-center items-center md:flex-row'}>
                 <Image className={'-mr-6 w-[256px] h-[243px]'} width={256} height={243} src={cicek1} alt={''}/>
                 <div className={'flex flex-col items-center justify-center'}>
-                    <h6 className={'davidlibrebold text-center mt-0 text-[80px]'}>
+                    <h6 className={'davidlibrebold text-center mt-0 text-[64px] sm:text-[80px]'}>
                         Our Special Dishes
                     </h6>
-                    <h6 className={'font-regular text-[20px] text-center w-[430px] text-[#5C6574]'}>
+                    <h6 className={'font-regular text-[20px] text-center w-[350px] sm:w-[430px] text-[#5C6574]'}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                     </h6>
                 </div>

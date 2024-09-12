@@ -153,7 +153,7 @@ const Steakwithtomato = () => {
                 <motion.div
                     whileHover={{scale: 1.02}}
                     transition={{type: "spring", stiffness: 300}}
-                    className={'absolute w-[457px] bx3 bg-white h-[153px] rounded-[20px]'}
+                    className={'absolute w-full sm:w-[457px] bx3 bg-white h-[153px] rounded-[20px]'}
                 >
                     <div className={'w-full flex pl-[15px] pt-[12px] pr-[24px] pb-[8px] justify-between items-center'}>
                         <h6 className={'font-bold text-[18px] uppercase text-[#000000] text-[18px]'}>

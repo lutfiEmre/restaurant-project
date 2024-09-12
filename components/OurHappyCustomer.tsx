@@ -17,7 +17,7 @@ const OurHappyCustomer = () => {
                 <p className={'w-full max-w-[419px] inter-regular text-secondarytext text-[18px] text-center'}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                 </p>
-                <div className={'mt-[70px] px-[50px] '}>
+                <div className={'mt-[70px] sm:px-[50px] w-full '}>
                     <HappySlider/>
 
                 </div>

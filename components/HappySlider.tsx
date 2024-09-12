@@ -10,7 +10,7 @@ import Image, { StaticImageData } from "next/image";
 
 // Örnek fotoğraflar için import
 import zenci from '../app/image/zenci.svg';
-
+import emrelutfisvg from '../app/image/emrelutfi.png'
 
 interface SlideData {
     id: number;
@@ -24,10 +24,10 @@ interface SlideData {
 const slideData: SlideData[] = [
     {
         id: 1,
-        image: zenci,
+        image: emrelutfisvg,
         comment: "Lorem buse ipsum dolor sit amet consectetur. Tortor massa nisl quam sit. Vitae congue ultrices neque penatibus mi in quisque. Leo in cursus enim magnis ante. Proin iaculis platea ipsum sagittis ac eu aliquam quis. Ornare tincidunt tempus semper",
-        name: "Ama Ampomah",
-        title: "CEO & Founder Inc",
+        name: "EmreLutfi",
+        title: "Front-End Developer",
         rating: 5
     },
     {
@@ -83,14 +83,14 @@ const HappySlider: React.FC = () => {
             <Swiper
                 onSwiper={(swiper) => {swiperRef.current = swiper}}
                 spaceBetween={50}
-                className={'w-[350px] sm:w-[500px] md:w-[600px] min-w-[350px] lg:w-[800px] flex justify-center items-center'}
+                className={'w-[350px] sm:w-[500px] h-full md:w-[600px] xl:w-[1000px] min-w-[350px] lg:w-[800px] flex justify-center items-center'}
                 slidesPerView={1}
                 onSlideChange={handleSlideChange}
                 modules={[Navigation, Pagination]}
             >
                 {slideData.map((slide) => (
-                    <SwiperSlide key={slide.id} className={'flex justify-center cursor-pointer p-8 pt-12 items-center gap-[8px]'}>
-                        <div className={'w-full h-fit flex flex-col justify-start items-center rounded rounded-br-[150px] rounded-bl-[50px] rounded-tr-[50px] bg-white rounded-tl-[150px]'}>
+                    <SwiperSlide key={slide.id} className={'flex  justify-center cursor-pointer p-8 pt-12 items-center gap-[8px]'}>
+                        <div className={'w-full h-full min-h-[300px] flex flex-col justify-start items-center rounded rounded-br-[150px] rounded-bl-[50px] rounded-tr-[50px] bg-white rounded-tl-[150px]'}>
                             <Image className={'rounded-full -mt-[40px]'} src={slide.image} width={124} height={124} alt={slide.name}/>
                             <div className={'flex flex-row mt-[15px] gap-[10px]'}>
                                 {Array(slide.rating).fill(null).map((_, starIndex) => (

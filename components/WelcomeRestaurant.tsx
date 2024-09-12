@@ -52,20 +52,20 @@
             <motion.div
                 initial="hidden"
                 animate="visible"
-                className={'   mt-[250px] lg:mt-[350px] 2xl:gap-[80px] flex items-center flex-col lg:flex-row'}
+                className={'   mt-[250px] lg:mt-[250px] 2xl:gap-[80px] flex items-center flex-col lg:flex-row'}
             >
                 <motion.div variants={slideIn("left")} className={'relative'}>
                     <motion.div animate={floatAnimation}>
-                        <Image className={'absolute z-10 right-[-50px] lg:w-[150px] xl:w-[230px] z-30 h-auto top-[120px]'} src={leaf1} width={221} height={147} alt={''}/>
-                        <Image className={'absolute blur-[50px] z-30 right-[-50px] w-[230px] h-auto top-[120px]'} src={leaf1} width={221} height={147} alt={''}/>
+                        <Image className={'absolute z-10 right-[60px] sm:right-[-50px] w-[150px] lg:w-[150px] xl:w-[230px] z-30 h-auto top-[0px] sm:top-[120px]'} src={leaf1} width={221} height={147} alt={''}/>
+                        <Image className={'absolute blur-[50px] z-30 right-[60px] sm:right-[-50px] w-[230px] h-auto top-[0px] sm:top-[120px]'} src={leaf1} width={221} height={147} alt={''}/>
 
                     </motion.div>
                     <motion.div variants={scaleIn}>
                         <Image className={'lg:w-[600px] w-[350px] sm:w-[450px] md:w-[600px] xl:w-[821px] h-auto -z-10'} width={821} height={762} src={foodt} alt={''}/>
                     </motion.div>
-                    <motion.div animate={floatAnimation2}>
-                        <Image className={'absolute left-0 z-10 bottom-[150px] lg:w-[90px] xl:w-[120px] h-auto'} src={leaf2} width={104} height={216} alt={''}/>
-                        <Image className={'absolute blur-[50px] left-0 z-10 bottom-[150px] w-[120px] h-auto'} src={leaf2} width={104} height={216} alt={''}/>
+                    <motion.div className={''} animate={floatAnimation2}>
+                        <Image className={'absolute left-0 z-10  bottom-[50px] sm:bottom-[150px] lg:w-[90px] xl:w-[120px] h-auto'} src={leaf2} width={104} height={216} alt={''}/>
+                        <Image className={'absolute blur-[50px] left-0 z-10 bottom-[50px] sm:bottom-[150px] w-[120px] h-auto'} src={leaf2} width={104} height={216} alt={''}/>
 
                     </motion.div>
                 </motion.div>

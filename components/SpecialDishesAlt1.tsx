@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { StaticImageData } from 'next/image';
 
-// Import your images
+
 import lumpiawithsauce from '../app/image/lumpiawithsauce.svg'
 import fishandveggie from '../app/image/fishandveggie.svg'
 import tofuchili from '../app/image/tofuchili.svg'
@@ -38,7 +38,7 @@ const SpecialDishesAlt1: React.FC = () => {
         setActiveIndex(index);
     };
     return (
-        <div className="flex mt-[90px] px-[50px] w-full xl:justify-start justify-center xl:flex-nowrap flex-wrap flex-row gap-[34px]">
+        <div className="flex mt-[90px] px-[50px] w-full  justify-center xl:flex-nowrap flex-wrap flex-row gap-[34px]">
             {items.map((item, index) => (
                 <motion.div
                     onClick={() => handleItemClick(index)}
