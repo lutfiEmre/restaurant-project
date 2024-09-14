@@ -6,7 +6,7 @@ import HappySlider from "@/components/HappySlider";
 
 const OurHappyCustomer = () => {
     return (
-        <div className={'relative pb-[100px] bg-[#F3F4F4] pt-[100px] mt-[150px] w-full h-full'}>
+        <div className={'relative pb-[350px] bg-[#F3F4F4] pt-[100px] mt-[150px] w-full h-full'}>
             <div className={'absolute left-0 top-0'}>
                 <Image className={'w-[400px] h-auto'} src={tava} width={862} height={1083} alt={''}/>
             </div>

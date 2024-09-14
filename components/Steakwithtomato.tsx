@@ -47,7 +47,7 @@ const Steakwithtomato = () => {
         <motion.div
             initial="hidden"
             animate="visible"
-            className={'mt-[73px] px-[75px] pb-[50px] relative flex flex-col items-center lg:flex-row lg:gap-[30px]'}
+            className={'mt-[25px] px-[75px] pb-[50px] relative flex flex-col items-center lg:flex-row lg:gap-[30px]'}
         >
             <div>
 

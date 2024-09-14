@@ -18,7 +18,7 @@ const SpecialDishes = () => {
 
     return (
         <div
-            className={'w-full pb-[100px] lg:pb-[250px] pt-[50px] sm:pt-[202px] justify-start items-center flex-col flex h-full bg-[#101A24] bg-opacity-5'}>
+            className={'w-full pb-[100px] lg:pb-[250px] pt-[50px] sm:pt-[102px] justify-start items-center flex-col flex h-full bg-[#101A24] bg-opacity-5'}>
             <div className={'flex flex-col justify-center items-center md:flex-row'}>
                 <Image className={'-mr-6 w-[256px] h-[243px]'} width={256} height={243} src={cicek1} alt={''}/>
                 <div className={'flex flex-col items-center justify-center'}>

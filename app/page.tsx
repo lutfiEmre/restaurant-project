@@ -4,6 +4,7 @@ import Steakwithtomato from "@/components/Steakwithtomato";
 import SpecialDishes from "@/components/SpecialDishes";
 import OurExpects from "@/components/OurExpects";
 import OurHappyCustomer from "@/components/OurHappyCustomer";
+import Subscribe from "@/components/Subscribe";
 
 export default function Home() {
   return (
@@ -13,6 +14,10 @@ export default function Home() {
           <SpecialDishes/>
           <OurExpects/>
           <OurHappyCustomer/>
+          <Subscribe/>
+          <div>
+              asd
+          </div>
           <div className={'w-full h-[500px]'}></div>
       </div>
   );
