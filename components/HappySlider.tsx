@@ -83,7 +83,7 @@ const HappySlider: React.FC = () => {
             <Swiper
                 onSwiper={(swiper) => {swiperRef.current = swiper}}
                 spaceBetween={50}
-                className={'w-[350px] sm:w-[500px] h-full md:w-[600px] xl:w-[1000px] min-w-[350px] lg:w-[800px] flex justify-center items-center'}
+                className={'xxsm:w-[350px] xsm:w-[400px] sm:w-[500px] h-full md:w-[600px] xl:w-[1000px] min-w-[350px] lg:w-[800px] flex justify-center items-center'}
                 slidesPerView={1}
                 onSlideChange={handleSlideChange}
                 modules={[Navigation, Pagination]}

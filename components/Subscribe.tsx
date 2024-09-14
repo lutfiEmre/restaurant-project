@@ -7,13 +7,13 @@ import subscribesvg from '../app/image/subscribe.svg';
 const Subscribe: React.FC = () => {
     return (
         <motion.div
-            className="min-h-[550px] w-full flex justify-center items-center px-4 sm:px-8 md:px-16 lg:px-32 xl:px-[203px]"
+            className="md:min-h-[350px] xl:min-h-[450px] 2xl:min-h-[550px] sm:min-h-[450px] min-h-[50px] w-full flex justify-center items-center px-4 sm:px-8 md:px-16 lg:px-32 xl:px-[203px]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
         >
             <motion.div
-                className="relative w-full max-w-[1315px] -mt-[600px] sm:-mt-[450px] flex justify-center items-center rounded-[50px] overflow-hidden"
+                className="relative w-full w-full max-w-[1600px] -mt-[600px] sm:-mt-[450px] flex justify-center items-center rounded-[50px] overflow-hidden"
                 initial={{ y: 50 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
