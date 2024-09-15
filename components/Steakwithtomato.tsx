@@ -309,7 +309,7 @@ const Steakwithtomato = () => {
                                     <div
                                         onClick={() => {setIsModalOpen(!isModalOpen)}}
                                         className={'py-[6px] h-fit flex cursor-pointer justify-center items-center px-[18px] rounded-[25px] bg-[#FFF500]'}>
-                                        <p className={'font-bold uppercase  text-[12px]'}>
+                                        <p className={'font-bold uppercase  text-[12px] text-center'}>
                                             Get coupen
                                         </p>
                                     </div>
@@ -345,7 +345,7 @@ const Steakwithtomato = () => {
                                     <div
                                         onClick={() => {setIsModalOpen(!isModalOpen)}}
                                         className={'py-[6px] h-fit flex cursor-pointer justify-center items-center px-[18px] rounded-[25px] bg-[#FFF500]'}>
-                                        <p className={'font-bold uppercase  text-[12px]'}>
+                                        <p className={'font-bold uppercase  text-[12px] text-center'}>
                                             Get coupen
                                         </p>
                                     </div>
@@ -382,7 +382,7 @@ const Steakwithtomato = () => {
                                     <div
                                         onClick={() => {setIsModalOpen(!isModalOpen)}}
                                         className={'py-[6px] h-fit flex cursor-pointer justify-center items-center px-[18px] rounded-[25px] bg-[#FFF500]'}>
-                                        <p className={'font-bold uppercase  text-[12px]'}>
+                                        <p className={'font-bold uppercase  text-[12px] text-center'}>
                                             Get coupen
                                         </p>
                                     </div>
@@ -418,7 +418,7 @@ const Steakwithtomato = () => {
                                     <div
                                         onClick={() => {setIsModalOpen(!isModalOpen)}}
                                         className={'py-[6px] h-fit flex cursor-pointer justify-center items-center px-[18px] rounded-[25px] bg-[#FFF500]'}>
-                                        <p className={'font-bold uppercase  text-[12px]'}>
+                                        <p className={'font-bold uppercase  text-[12px] text-center'}>
                                             Get coupen
                                         </p>
                                     </div>
