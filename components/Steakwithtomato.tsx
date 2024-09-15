@@ -1,17 +1,60 @@
 "use client"
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion,AnimatePresence } from "framer-motion";
 import cizgi from '../app/image/cizgi.svg';
 import yemekresmi from '../app/image/yemekresmi1.svg';
 import fishsalad from '../app/image/fishsalad.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import CouponModal from "@/components/CouponModal";
+import chickensld from '../app/image/salad.svg'
+import salmonsalad from '../app/image/salmonsalad.svg'
+import steaktomato from '../app/image/steakpotato.svg'
+import AnimatedSlideComponent from "@/components/AnimatedSlideComponent";
+const slidesFood = [
+    {
+        id: 1,
+        title: 'steak with tomato',
+        subtitle: 'Salisbury Steak is made with ground beef that has been shaped into patties, while Swiss Steak is made with actual steak. For Swiss Steak, the beef is rolled or pounded and then braised in a\n',
+        image: yemekresmi,
+    },
+    {
+        id: 2,
+        title: 'chicken salad ',
+        subtitle: "Salisbury Steak is made with ground beef that has been shaped into patties, while Swiss Steak is made with actual steak. For Swiss Steak, the beef is rolled or pounded and then braised in a",
+        image: chickensld,
+    },
+    {
+        id: 3,
+        title: 'salmon salad ',
+        subtitle: "Salisbury Steak is made with ground beef that has been shaped into patties, while Swiss Steak is made with actual steak. For Swiss Steak, the beef is rolled or pounded and then braised in a",
+        image: salmonsalad,
+    },
+    {
+        id: 4,
+        title: 'steak with potato ',
+        subtitle: "Salisbury Steak is made with ground beef that has been shaped into patties, while Swiss Steak is made with actual steak. For Swiss Steak, the beef is rolled or pounded and then braised in a",
+        image: steaktomato,
+    },
 
+];
 const Steakwithtomato = () => {
     const discountSwiper = useRef<any>(null);
 
+
+
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentSlide((prevSlide) => (prevSlide + 1) % slidesFood.length);
+        }, 5000);
+
+        return () => clearInterval(timer);
+    }, []);
+
+    const slide = slidesFood[currentSlide];
 
     const handleNextSlide = () => {
         if (discountSwiper.current && discountSwiper.current.swiper) {
@@ -49,6 +92,44 @@ const Steakwithtomato = () => {
             animate="visible"
             className={'mt-[25px] px-[75px] pb-[50px] relative flex flex-col items-center lg:flex-row lg:gap-[30px]'}
         >
+            <div className={'absolute flex flex-col gap-[17px] bottom-[141px] right-[55px]'}>
+                <div
+                    onClick={() => {setCurrentSlide(0)}}
+                    className={`w-[30px] h-[30px] cursor-pointer rounded-full ${
+                        slide.id === 1 ? 'bg-[#FF1515]' : 'bg-[#2C2C2C]'
+                    }
+                    
+                        `}
+                ></div>
+                <div
+                    onClick={() => {setCurrentSlide(1)}}
+                    className={`w-[30px] h-[30px] cursor-pointer rounded-full 
+                        ${
+                        slide.id === 2 ? 'bg-[#FFA800]' : 'bg-[#2C2C2C]'
+                    }
+                     
+                        `}
+                ></div>
+                <div
+                    onClick={() => {setCurrentSlide(2)}}
+                    className={`w-[30px] h-[30px] cursor-pointer rounded-full 
+                        
+                         ${
+                        slide.id === 3 ? 'bg-[#00A839]' : 'bg-[#2C2C2C]'
+                    }
+                          
+                        `}
+                ></div>
+                <div
+                    onClick={() => {setCurrentSlide(3)}}
+                    className={`w-[30px] h-[30px] cursor-pointer rounded-full 
+                           ${
+                        slide.id === 4 ? 'bg-[#FF2B2B]' : 'bg-[#2C2C2C]'
+                    }
+                        `}
+                ></div>
+            </div>
+
             <div>
 
                 <CouponModal
@@ -60,20 +141,14 @@ const Steakwithtomato = () => {
             <motion.div variants={slideIn} className={'flex flex-col w-full lg:items-start items-center'}>
                 <motion.h6 variants={fadeIn}
                            className={'font-semibold uppercase text-[22px] sm:text-[25px] w-fit lg:w-full text-center lg:text-center xl:text-start 2xl:text-[30px] text-[24px] text-black'}>
-                    Design by emrelutfi.com
+                Design by emrelutfi.com
                 </motion.h6>
-                <motion.h5
-                    variants={fadeIn}
-                    className={'portligat w-fit text-center leading-[130px] text-[120px] xl:leading-[90px] 2xl:leading-[120px] lg:leading-[100px] lg:text-center xl:text-start text-[#A80000] xl:text-[100px] lg:text-[100px] 2xl:text-[120px]'}
-                >
-                    steak with tomato
-                </motion.h5>
+                <AnimatedSlideComponent slide={slide}/>
                 <motion.h6
                     variants={fadeIn}
                     className={'font-medium lg:text-center text-[20px] text-center xl:text-start w-full mt-[30px] max-w-[100%] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] text-black'}
                 >
-                    Salisbury Steak is made with ground beef that has been shaped into patties, while Swiss Steak is
-                    made with actual steak. For Swiss Steak, the beef is rolled or pounded and then braised in a
+                    {slide.subtitle}
                 </motion.h6>
                 <motion.div variants={fadeIn} className={'w-full items-center flex-col justify-center flex'}>
                     <motion.div
@@ -136,7 +211,7 @@ const Steakwithtomato = () => {
                 >
                     <Image
                         className={'bx1 top-0 left-0 lg:opacity-100 mr-[40px] select-none w-full rotate-360 rounded-full h-auto mt-[20px] lg:mt-0 lg:h-full 2xl:w-[1200px] lg:w-[600px] xl:w-[600px]'}
-                        src={yemekresmi}
+                        src={slide.image}
                         width={721}
                         height={721}
                         alt={''}
@@ -210,11 +285,11 @@ const Steakwithtomato = () => {
                             <div
                                 className={'w-full items-center  justify-between flex h-[110px] flex-row gap-[8px] pb-[15px] pt-0 pr-[10px] pl-[13px] '}>
                                 <div className={'flex flex-row items-center gap-[8px]'}>
-                                    <Image className={'w-[100px] h-[100px]'} src={fishsalad} width={100} height={100}
+                                    <Image className={'w-[100px] h-[90px]'} src={slide.image} width={100} height={100}
                                            alt={''}/>
                                     <div className={'flex flex-col gap-[5px]'}>
                                         <h6 className={'font-extrabold uppercase text-[18px]'}>
-                                            Fish salad
+                                            {slide.title}
                                         </h6>
                                         <h6 className={'font-bold uppercase text-[14px]'}>
                                             medium
@@ -246,7 +321,7 @@ const Steakwithtomato = () => {
                             <div
                                 className={'w-full items-center  justify-between flex h-[110px] flex-row gap-[8px] pb-[15px] pt-0 pr-[10px] pl-[13px] '}>
                                 <div className={'flex flex-row items-center gap-[8px]'}>
-                                    <Image className={'w-[100px] h-[100px]'} src={fishsalad} width={100} height={100}
+                                    <Image className={'w-[100px] h-[100px]'} src={slide.image} width={100} height={100}
                                            alt={''}/>
                                     <div className={'flex flex-col gap-[5px]'}>
                                         <h6 className={'font-extrabold uppercase text-[18px]'}>
@@ -278,6 +353,7 @@ const Steakwithtomato = () => {
                             </div>
 
                         </SwiperSlide>
+
                         <SwiperSlide>
                             <div
                                 className={'w-full items-center  justify-between flex h-[110px] flex-row gap-[8px] pb-[15px] pt-0 pr-[10px] pl-[13px] '}>
@@ -362,6 +438,7 @@ const Steakwithtomato = () => {
                        width={1375} height={1375}
                        alt={''}/>
             </motion.div>
+
         </motion.div>
     );
 };

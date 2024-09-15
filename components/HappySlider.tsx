@@ -32,27 +32,27 @@ const slideData: SlideData[] = [
     },
     {
         id: 2,
-        image: zenci,
-        comment: "Dolor sit amet consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.",
-        name: "John Doe",
-        title: "Marketing Director",
-        rating: 4
+        image: emrelutfisvg,
+        comment: "Lorem buse ipsum dolor sit amet consectetur. Tortor massa nisl quam sit. Vitae congue ultrices neque penatibus mi in quisque. Leo in cursus enim magnis ante. Proin iaculis platea ipsum sagittis ac eu aliquam quis. Ornare tincidunt tempus semper",
+        name: "EmreLutfi",
+        title: "Front-End Developer",
+        rating: 3
     },
     {
         id: 3,
-        image: zenci,
-        comment: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        name: "Jane Smith",
-        title: "Product Manager",
-        rating: 5
+        image: emrelutfisvg,
+        comment: "Lorem buse ipsum dolor sit amet consectetur. Tortor massa nisl quam sit. Vitae congue ultrices neque penatibus mi in quisque. Leo in cursus enim magnis ante. Proin iaculis platea ipsum sagittis ac eu aliquam quis. Ornare tincidunt tempus semper",
+        name: "EmreLutfi",
+        title: "Front-End Developer",
+        rating: 4
     },
     {
         id: 4,
-        image: zenci,
-        comment: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        name: "Jane Smith",
-        title: "Product Manager",
-        rating: 5
+        image: emrelutfisvg,
+        comment: "Lorem buse ipsum dolor sit amet consectetur. Tortor massa nisl quam sit. Vitae congue ultrices neque penatibus mi in quisque. Leo in cursus enim magnis ante. Proin iaculis platea ipsum sagittis ac eu aliquam quis. Ornare tincidunt tempus semper",
+        name: "EmreLutfi",
+        title: "Front-End Developer",
+        rating: 1
     },
     {
         id: 5,
